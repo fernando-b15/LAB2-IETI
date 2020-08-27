@@ -1,3 +1,5 @@
+
+# LAB-2-IETI
 <p align="center">
   <a href="https://material-ui.com/" rel="noopener" target="_blank"><img width="150" src="https://material-ui.com/static/logo.svg" alt="Material-UI logo"></a></p>
 </p>
@@ -12,6 +14,15 @@
 
 
 React project using Material-UI library.
+
+## Author
+  * [Fernando Barrera Barrera](https://github.com/fernando-b15) :guitar:
+  
+  
+## Credentials Of User
+
+  * **Mail:** admin@hotmail.com
+  * **Password:** admin
 
 ## Part 1: Create a Login Component
 1. Clone the repository, install and run the project to verify that it works:
