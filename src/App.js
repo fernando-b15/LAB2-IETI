@@ -11,16 +11,19 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {isLoggedIn: false};
+		this.handleState = this.handleState.bind(this);
+		if (localStorage.getItem("isLoggedIn") === null) {
+			localStorage.setItem("isLoggedIn", false);
+		}
+		else{
+			this.handleState();
+		}
+		
+		
 	}
 	render() {
-		const  LoginView  =  ( )  =>  ( 
-			< Login / > 
-		 ) ;
-
-		const  TodoAppView  =  ( )  =>  ( 
-			< TodoApp / > 
-		 ) ;
-		
+		console.log('entro a render');
+		console.log(this.state.isLoggedIn);
 		if (this.state.isLoggedIn) {
 			return(
 				< TodoApp / > 
@@ -28,10 +31,19 @@ class App extends Component {
 		}
 		else{
 			return(
-				< Login / >
+				< Login logged={this.handleState} />
 			);			
 		} 
     }
-}	
+	handleState(){
+		const res = this.state.isLoggedIn;
+		console.log(res);
+		setTimeout(() => {
+		  this.setState({isLoggedIn: true});
+		}, 100);
+		
+	}
+	
+}
+export default App;	
 
-export default App;
